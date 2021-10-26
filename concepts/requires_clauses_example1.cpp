@@ -19,7 +19,7 @@ std::string to_string_2(const T &text)
 int main()
 {
     std::cout << to_string(std::string("5")) << std::endl;
-    // std::cout << print_string("Error") << std::endl;  // char[5] != std::string
+    // std::cout << to_string("Error") << std::endl;  // char[5] != std::string
     std::cout << to_string_2("This") << std::endl;  // char[5] is convertible to std::string
 }
 
