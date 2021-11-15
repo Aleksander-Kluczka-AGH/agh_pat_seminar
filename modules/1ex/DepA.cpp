@@ -1,0 +1,3 @@
+class DepA {
+	DepB d;
+};
