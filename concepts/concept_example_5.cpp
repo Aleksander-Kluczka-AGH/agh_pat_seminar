@@ -28,15 +28,14 @@ concept IsArray = requires (T t)
 };
 
 template <typename T>
-concept Ranged = BeginEnd<T> || Iterator<T> || IsArray<T>;
-
-template <typename T>
 concept IsAssociative = requires (T t)
 {
     { typename T::key_type() };
     { typename T::mapped_type() };
 };
 
+template <typename T>
+concept Ranged = BeginEnd<T> || Iterator<T> || IsArray<T>;
 
 template <typename T>
 requires Ranged<T> /*&& (!IsAssociative<T>)*/  // additional negation is not necessary...
@@ -72,3 +71,8 @@ int main()
     std::map<std::string, int> msi = { {"one", 1}, {"two", 2} };
     print_range(msi);
 }
+
+// output:
+// 1 2 3 4 5
+// 3 4 5 6 7
+// {one : 1} {two : 2}

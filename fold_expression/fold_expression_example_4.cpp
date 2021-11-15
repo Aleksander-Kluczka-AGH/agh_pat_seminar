@@ -8,7 +8,7 @@ void print(T&& arg)
 }
 
 template <typename Fun, typename... Typepack>
-void execute(Fun func, Typepack&& ...types)
+void execute(Fun&& func, Typepack&& ...types)
 {
     ( func(std::forward<Typepack>(types)), ... );
 }

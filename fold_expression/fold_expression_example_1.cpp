@@ -7,6 +7,7 @@ template <typename... Typepack>
 constexpr bool isTrue(const Typepack& ...args)
 {
     return (args && ...);
+    // return arg1 && arg2 && arg3 && arg4 ...;
 }
 
 int main()
@@ -19,4 +20,4 @@ int main()
 // output:
 // 0
 // 1
-// 1
+// 1 ?

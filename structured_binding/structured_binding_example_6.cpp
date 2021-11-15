@@ -27,23 +27,8 @@ int main()
             std::cout << "The value \"" << *iter << "\" already exists in the set.\n";
         }
     }
-
-    {
-        const auto [b, d, p, q] = BitFields{};
-        std::cout << b << ' ' << d << ' ' << p << ' ' << q << '\n';
-    }
-    {
-        const auto [b, d, p, q] = []
-        {
-            return BitFields{4, 3, 2, 1};
-        }();  // lambda with falling initializer
-
-        std::cout << b << ' ' << d << ' ' << p << ' ' << q << '\n';
-    }
 }
 
 // output:
 // Insert is successful. The value is "Hello".
 // The value "Hello" already exists in the set.
-// 1 2 3 4
-// 4 3 2 1

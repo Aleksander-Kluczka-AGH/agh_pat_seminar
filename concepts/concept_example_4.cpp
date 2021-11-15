@@ -3,7 +3,7 @@
 #include <iostream>
 
 template <typename T>
-struct A
+class A
 {
     template <typename U = T>
     requires std::integral<U>

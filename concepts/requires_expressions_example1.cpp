@@ -21,7 +21,7 @@ int main()
     // second constraint for 'b' is satisfied and then 'b' is implicitly casted to int
 
     // std::cout << print_string_3(6.f) << std::endl;  // constraint 2 unsatisfied and can't implicitly cast to char
-    // std::cout << print_string_3("c") << std::endl;  // both constraints unsatisfied
+    // std::cout << print_string_3("c") << std::endl;  // constraint 1 unsatisfied
 }
 
 // output:

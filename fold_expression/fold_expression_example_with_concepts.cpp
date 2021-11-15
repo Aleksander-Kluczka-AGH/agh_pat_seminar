@@ -29,3 +29,12 @@ int main()
     print(5, 4.f, 'c', 3.0, "hello there", obj, str);
     return 0;
 }
+
+// output:
+// 5
+// 4
+// c
+// 3
+// hello there
+// 8
+// ohno
